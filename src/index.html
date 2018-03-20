@@ -4,52 +4,156 @@
     <meta charset="UTF-8">
     <!--视口-->
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5">
     <!--苹果设置-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <!--禁止识别手机号、邮箱-->
     <meta name="format-detection" content="telephone=no,email=no">
     <title>淘宝M站</title>
-
-    <style type="text/css">
-        .father{
-            background-color: greenyellow;
-            width: 500px;
-            height: 300px;
-            /*position: relative;*/
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .child{
-            width: 100px;
-            height: 100px;
-            background-color: #dddddd;
-            /*position: absolute;*/
-            /*top: 50%;*/
-            /*left: 50%;*/
-            /*margin-left: -50%;*/
-            /*margin-top: -50%;*/
-            /*bottom: 0;*/
-            /*right: 0;*/
-        }
-    </style>
+    <link rel="stylesheet" href="lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
 <div class="viewPort">
-    <!--搜索框-->
+    <!--搜索框开始-->
     <div class="search-tab">
         <div><span>寻找宝贝店铺</span></div>
     </div>
+    <!--搜索框结束-->
+
+    <!--登录条开始-->
+    <section class="open-mobile clearfix">
+        <a class="close" href="javascript:;">X</a>
+        <div class="tips-content">
+            <a href="javascript:;">
+                <img src="images/logo.png" alt="logo">
+                <div class="tips">
+                    <h4>打开手机淘宝App</h4>
+                    <p>随时随地 想淘就淘</p>
+                </div>
+                <div class="open">
+                    <span>立即打开</span>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!--登录条结束-->
+
+    <!--轮播图-->
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="images/ad-03.jpg" alt="ad-03"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/ad-04.jpg" alt="ad-04"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/ad-03.jpg" alt="ad-03"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/ad-04.jpg" alt="ad-04"></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/ad-05.jpg" alt="ad-05"></a></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!--分类菜单-->
+    <section class="category-list">
+        <div class="tps1">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-tmail.png" alt="">
+                        <p>天猫</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-ju.png" alt="">
+                        <p>聚划算</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-jinkou.png" alt="">
+                        <p>天猫国际</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-waimai.png" alt="">
+                        <p>外卖</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-maket.png" alt="">
+                        <p>天猫超市</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="tps2">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-chongzhi.png" alt="">
+                        <p>充值中心</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-feizhu.png" alt="">
+                        <p>飞猪旅行</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-jinbi.png" alt="">
+                        <p>领金币</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-paimai.png" alt="">
+                        <p>拍卖</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/tps/tab-category.png" alt="">
+                        <p>分类</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--淘宝头条-->
+    <section class="toutiao">
+        <div>
+            <a href="#">
+                <span></span>
+                <span>动漫</span>
+                <span>火影时代出现的新人物，是自来也家族里面的英雄</span>
+            </a>
+        </div>
+    </section>
+
+    <!--分割线-->
+    <div style="background-color: #eee; height: 15px; width: 100%;"></div>
+
+    <!---->
 </div>
-<div class="father">
-    <div class="child"></div>
-</div>
-</body>
+
+
+<script src="lib/zepto.min.js"></script>
+<script src="lib/swiper/swiper.jquery.min.js"></script>
+<script src="js/index.js"></script>
 
 <script>
-    
+
+    var windowW = window.screen.width / 10 + "px";
+    document.getElementsByTagName("html")[0].style.fontSize = windowW;
 </script>
+</body>
 </html>

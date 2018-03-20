@@ -1,3 +1,199 @@
-.search-bar{
+@import "variable";
+@import "normalize";
+
+@font-face {
+  font-family: "tb-font-icon";
+  src: url(../fonts/iconfont.svg) format("svg"),
+      url(../fonts/iconfont.eot) format("embedded-opentype"),
+      url(../fonts/iconfont.ttf) format("opentype"),
+      url(../fonts/iconfont.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body{
+  .fs(24px);
+}
+.viewPort{
   width: 100%;
+}
+
+/************搜索框************/
+.search-tab{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 74px;
+  background: orangered url(../images/logo.png) 9px center no-repeat;
+  background-size: 60px auto;
+  padding:12px 15px;
+  padding-left: 74px;
+  div{
+    width: 100%;
+    height: 100%;
+    background-color: #9d0c00;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 50px;
+    span{
+      color: #F0E0DC;
+      font-size: 26px;
+    }
+    span::before{
+      content: "\e8ba  ";
+      font-family: tb-font-icon;
+    }
+  }
+}
+/************搜索框************/
+
+/************打开手机************/
+.open-mobile{
+  width: 100%;
+  height: 140px;
+  margin-top: 74px;
+  position: relative;
+  .close{
+    display: inline-block;
+    font-size: 36px;
+    width: 70px;
+    line-height: 140px;
+    text-align: center;
+    color: #c0c0c0;
+  }
+  .tips-content{
+    width: 100%;
+    height: 100%;
+    padding-left: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    a{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      img{
+        height: 100px;
+        margin-top: 20px;
+      }
+      .tips{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 110px;
+        color: #333;
+        padding-top: 20px;
+        h4{
+          font-size: 32px;
+          line-height: 64px;
+        }
+      }
+      .open{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 180px;
+        line-height: 140px;
+        font-size: 28px;
+        color: white;
+        background-color: darkorange;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+/************轮播图************/
+.swiper-container .swiper-wrapper .swiper-slide img{
+  width: 100%;
+}
+
+/************分类tps************/
+.category-list{
+  width: 100%;
+  div{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    ul{
+      .padding(15px,15px);
+      display: flex;
+      width: 100%;
+      li{
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        a{
+          color: #666;
+          img{
+            .h(84px);
+          }
+          p{
+            .lh(36px)
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/************头条************/
+.toutiao{
+  width: 100%;
+  .h(70px);
+  border-top: 1px solid #c0c0c0;
+  .padding(4px,4px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  div{
+    width: 100%;
+    height: 100%;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #333333;
+      position: relative;
+      overflow: hidden;
+      padding-right: 10px;
+      span{
+        font-size: 32px;
+        line-height: 32px;
+        display: inline-block;
+      }
+      span:first-of-type{
+        .padding(0,15px);
+        .w(180px);
+        height: 100%;
+        border-right: 1px solid #c0c0c0;
+        background: url(../images/tps/more-toutiao.png) center center no-repeat;
+        -webkit-background-size: 140px;
+        background-size: 140px;
+      }
+      span:nth-of-type(2){
+        border: 1px solid red;
+        color: red;
+        border-radius: 10px;
+        .padding(4px,4px);
+        position: absolute;
+        .left(200px);
+        .top(13px);
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      span:last-of-type{
+        position: absolute;
+        .left(280px);
+        .top(15px);
+        white-space: nowrap;
+      }
+    }
+  }
 }
